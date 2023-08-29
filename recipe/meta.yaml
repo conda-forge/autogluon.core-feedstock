@@ -80,6 +80,10 @@ outputs:
       imports:
         # dummy test; actual tests are in subpackages
         - autogluon.core
+      commands:
+        - python -c "from autogluon.core import __version__ as v; assert v == '{{ version }}', f'{v} != {{ version }}'"
+      requires:
+        - pip
 
 about:
   home: https://pypi.org/project/autogluon.core
