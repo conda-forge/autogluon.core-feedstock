@@ -3,6 +3,27 @@ About autogluon.core-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/autogluon.core-feedstock/blob/main/LICENSE.txt)
 
+
+About autogluon.core
+--------------------
+
+Home: https://pypi.org/project/autogluon.core
+
+Package license: Apache-2.0
+
+Summary: AutoML for Image, Text, and Tabular Data
+
+Development: https://github.com/autogluon/autogluon/
+
+AutoGluon automates machine learning tasks enabling you to easily achieve strong 
+predictive performance in your applications. With just a few lines of code, you 
+can train and deploy high-accuracy machine learning and deep learning models on 
+image, text, time series, and tabular data.  
+
+
+About autogluon.core-light
+--------------------------
+
 Home: https://pypi.org/project/autogluon.core
 
 Package license: Apache-2.0
@@ -131,7 +152,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-autogluon.core-green.svg)](https://anaconda.org/conda-forge/autogluon.core) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/autogluon.core.svg)](https://anaconda.org/conda-forge/autogluon.core) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/autogluon.core.svg)](https://anaconda.org/conda-forge/autogluon.core) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/autogluon.core.svg)](https://anaconda.org/conda-forge/autogluon.core) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-autogluon.core--light-green.svg)](https://anaconda.org/conda-forge/autogluon.core-light) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/autogluon.core-light.svg)](https://anaconda.org/conda-forge/autogluon.core-light) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/autogluon.core-light.svg)](https://anaconda.org/conda-forge/autogluon.core-light) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/autogluon.core-light.svg)](https://anaconda.org/conda-forge/autogluon.core-light) |
 
 Installing autogluon.core
 =========================
@@ -143,41 +164,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `autogluon.core` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `autogluon.core-light` can be installed with `conda`:
 
 ```
-conda install autogluon.core
-```
-
-or with `mamba`:
-
-```
-mamba install autogluon.core
-```
-
-It is possible to list all of the versions of `autogluon.core` available on your platform with `conda`:
-
-```
-conda search autogluon.core --channel conda-forge
+conda install autogluon.core-light
 ```
 
 or with `mamba`:
 
 ```
-mamba search autogluon.core --channel conda-forge
+mamba install autogluon.core-light
+```
+
+It is possible to list all of the versions of `autogluon.core-light` available on your platform with `conda`:
+
+```
+conda search autogluon.core-light --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search autogluon.core-light --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search autogluon.core --channel conda-forge
+mamba repoquery search autogluon.core-light --channel conda-forge
 
-# List packages depending on `autogluon.core`:
-mamba repoquery whoneeds autogluon.core --channel conda-forge
+# List packages depending on `autogluon.core-light`:
+mamba repoquery whoneeds autogluon.core-light --channel conda-forge
 
-# List dependencies of `autogluon.core`:
-mamba repoquery depends autogluon.core --channel conda-forge
+# List dependencies of `autogluon.core-light`:
+mamba repoquery depends autogluon.core-light --channel conda-forge
 ```
 
 
