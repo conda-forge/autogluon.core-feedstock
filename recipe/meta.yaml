@@ -42,7 +42,7 @@ requirements:
     - ray-default >=2.43.0,<2.53
     - ray-tune >=2.43.0,<2.53
     - hyperopt >=0.2.7,<0.2.8
-    - stevedore<5.5
+    - stevedore <5.5
 
 test:
   imports:
