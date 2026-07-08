@@ -39,8 +39,8 @@ requirements:
     - matplotlib >=3.7.0,<3.11
     - boto3 >=1.10,<2
     - autogluon.common =={{ version }}
-    - ray-default >=2.43,<2.54
-    - ray-tune >=2.43,<2.54
+    - ray-default >=2.43,<2.57 # Bumped upper bound to address CVE
+    - ray-tune >=2.43,<2.57 # Bumped upper bound to address CVE
     - hyperopt >=0.2.7,<0.2.8 
 
 test:
