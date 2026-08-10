@@ -1,5 +1,5 @@
 {% set name = "autogluon.core" %}
-{% set version = "1.5.0" %}
+{% set version = "1.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/autogluon/autogluon/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 133ceb769cebce26255f379c129b58acacab2424a692b7ee81f02d78bbb228cb
+  sha256: 914089387b946a53fe48054c38837ff5a3aa6224b956d00386505110d6f838c0
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install ./core -vv
-  number: 2
+  number: 0
   script_env:
     - RELEASE=1
 
@@ -22,26 +22,28 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
-    - numpy  >=1.25,<2.4.0                    # [build_platform != target_platform]
+    - numpy  >=1.25.0,<2.6.0                  # [build_platform != target_platform]
   host:
     - python {{ python_min }}
     - pip
   # see https://github.com/autogluon/autogluon/blob/master/core/src/autogluon/core/_setup_utils.py
   run:
     - python >={{ python_min }},<3.14
-    - numpy >=1.25,<2.4.0
-    - scipy >=1.5.4,<1.17
-    - scikit-learn >=1.4.0,<1.8.0  
+    - numpy >=1.25.0,<2.6.0
+    - scipy >=1.5.4,<1.19
+    - scikit-learn >=1.4.0,<1.10.0
     - networkx >=3.0,<4
     - pandas >=2.0.0,<2.4.0
     - tqdm >=4.38,<5
     - requests
-    - matplotlib >=3.7.0,<3.11
+    - matplotlib >=3.7.0,<3.12
     - boto3 >=1.10,<2
+    - typing-extensions >=4.14.0,<5
     - autogluon.common =={{ version }}
-    - ray-default >=2.43,<2.57 # Bumped upperbound to address CVE
-    - ray-tune >=2.43,<2.57 # Bumped upperbound to address CVE
-    - hyperopt >=0.2.7,<0.2.8 
+    - autogluon.features =={{ version }}
+    - ray-default >=2.55,<2.57 # Bumped lowerbound to address CVE
+    - ray-tune >=2.55,<2.57 # Bumped lowerbound to address CVE
+    - hyperopt >=0.2.7,<0.2.8
 
 test:
   imports:
